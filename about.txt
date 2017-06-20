@@ -1,0 +1,12 @@
+Welcome to App Case,
+Here you can install, update, and view all the apps available
+for your Ubuntu distributed operating system.
+The basic commands are:
+	- install: to install application
+	- update: to update your system, done automatically while
+	the program starts
+	- apps: lists all applications available to install
+	- about: views the applications' detail
+	- exit: to end the program
+Thank you for using this small application that I have created.
+Mehrzad Bazhdanzadeh
