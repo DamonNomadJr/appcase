@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 void install();
@@ -9,26 +10,26 @@ void about();
 void aboutThisApp();
 
 void main(){
-	printf("Please initialize by typing in your password:");
+
 	char command[50];
-   	strcpy( command, "dir" );
-	system(command);
 	char input[7] ={0};
 
 	aboutThisApp();
 	while(1){
+		printf("<><><><><><><><><><><><><>\n");
 		printf("Input command [install/update/apps/about/exit]: ");
 		scanf("%s", input);
-		printf("Current input value \"%s\" ", input);
 
 		if (!strcmp(input,"install")){
 			printf("INSTALL\n");
 		}
 		else if (!strcmp(input,"update")){
 			printf("UPDATE\n");
+			update();
 		}
 		else if (!strcmp(input,"apps")){
 			printf("APPS\n");
+			apps();
 		}
 		else if (!strcmp(input,"about")){
 			printf("ABOUT\n");
@@ -52,5 +53,12 @@ void aboutThisApp(){
 }
 
 void update(){
+	printf("<><><><><><><><><><><><><>\n");
+	system("sudo apt-get update");
+	system("sudo apt-get upgrade");
+}
 
+void apps(){
+	printf("<><><><><><><><><><><><><>\n");
+	system("ls repository/ -1");
 }
